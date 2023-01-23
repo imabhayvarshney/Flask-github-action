@@ -32,14 +32,5 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run:  ./gradlew build
-      
-    - name: Build and push docker Image
-      uses: docker/build-push-action@v3
-      with:
-          image: imabhay/gradleapp
-          registry: docker.io
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          
     
       
